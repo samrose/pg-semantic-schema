@@ -1,0 +1,15 @@
+result
+.clj-kondo/
+.lsp/
+.nrepl-port
+.nrepl-history
+.nrepl-history
+.DS_Store
+.idea/
+.vscode/
+.cursorrules
+.cursor/
+.cursor/
+.lein*
+target/
+.postgres/

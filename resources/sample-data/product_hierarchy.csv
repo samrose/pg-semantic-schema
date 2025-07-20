@@ -1,0 +1,13 @@
+product_id,product_name,sku,category_id,category_name,subcategory_id,subcategory_name,brand_id,brand_name,supplier_id,supplier_name,unit_cost,list_price,weight_lbs,dimensions_inches,color,size
+P001,Wireless Bluetooth Headphones,WBH-001,CAT001,Electronics,SUB001,Audio,BRD001,SoundTech,SUP001,AudioSupply Co,$20.00,$29.99,0.75,8x6x3,Black,One Size
+P002,Gaming Laptop 15inch,GL-15-001,CAT001,Electronics,SUB002,Computers,BRD002,TechCorp,SUP002,Computer Wholesale,$1500.00,$199.99,5.2,14x10x1,Silver,15 inch
+P003,Cotton T-Shirt,CT-001,CAT002,Clothing,SUB003,Shirts,BRD003,FashionPlus,SUP003,Textile Imports,$8.00,$15.50,0.3,Various,Blue,Medium
+P004,Organic Coffee Beans,OCB-001,CAT003,Food & Beverage,SUB004,Coffee,BRD004,BrewMaster,SUP004,Coffee Traders,$6.00,$8.99,1.0,6x4x2,Brown,12 oz
+P005,Fitness Tracker Watch,FTW-001,CAT001,Electronics,SUB005,Wearables,BRD005,FitLife,SUP005,Health Tech,$65.00,$89.99,0.2,2x2x0.5,Black,One Size
+P006,Professional Camera,PC-001,CAT001,Electronics,SUB006,Photography,BRD006,PhotoPro,SUP006,Camera Direct,$2200.00,$299.99,2.8,6x4x4,Black,DSLR
+P007,Home Theater System,HTS-001,CAT001,Electronics,SUB001,Audio,BRD007,SoundMax,SUP007,Entertainment Plus,$350.00,$449.99,25.0,24x18x12,Black,5.1 Surround
+P008,Ergonomic Office Chair,EOC-001,CAT004,Furniture,SUB007,Office,BRD008,ComfortSeating,SUP008,Office Solutions,$95.00,$125.00,35.0,26x26x40,Gray,Standard
+P009,Skincare Moisturizer,SM-001,CAT005,Beauty & Personal Care,SUB008,Skincare,BRD009,GlowBeauty,SUP009,Beauty Wholesale,$45.00,$75.99,0.5,3x3x6,White,2 fl oz
+P010,Board Game Classic,BGC-001,CAT006,Toys & Games,SUB009,Board Games,BRD010,GameTime,SUP010,Toy Distributors,$15.00,$22.50,2.0,12x12x3,Multi,Family
+P011,Premium Kitchen Knife Set,PKNS-001,CAT007,Home & Kitchen,SUB010,Cutlery,BRD011,ChefMaster,SUP011,Kitchen Supply,$250.00,$350.00,3.5,14x8x2,Silver,8-piece
+P012,4K Smart TV 55inch,STV-55-001,CAT001,Electronics,SUB011,Television,BRD012,ViewTech,SUP012,Electronics Mega,$450.00,$599.99,45.0,49x28x3,Black,55 inch

@@ -1,0 +1,12 @@
+customer_id,first_name,last_name,email,phone,address,city,state,zip_code,country,customer_type,registration_date,birth_date
+C001,John,Doe,john.doe@email.com,(555) 123-4567,123 Main St,Springfield,IL,62701,USA,Premium,2022-03-15,1985-07-22
+C002,Jane,Smith,jane.smith@gmail.com,(555) 234-5678,456 Oak Ave,Chicago,IL,60601,USA,Standard,2022-05-20,1990-12-03
+C003,Bob,Johnson,bob.johnson@yahoo.com,(555) 345-6789,789 Pine St,Peoria,IL,61602,USA,Premium,2022-08-10,1978-04-15
+C004,Alice,Williams,alice.williams@hotmail.com,(555) 456-7890,321 Elm Dr,Rockford,IL,61103,USA,Standard,2022-09-25,1992-11-28
+C005,Charlie,Brown,charlie.brown@outlook.com,(555) 567-8901,654 Maple Ln,Aurora,IL,60502,USA,VIP,2021-12-05,1975-09-08
+C006,Diana,Davis,diana.davis@email.com,(555) 678-9012,987 Cedar Rd,Joliet,IL,60431,USA,Premium,2022-01-18,1988-06-14
+C007,Frank,Miller,frank.miller@gmail.com,(555) 789-0123,147 Birch St,Naperville,IL,60540,USA,VIP,2021-11-30,1970-02-25
+C008,Grace,Wilson,grace.wilson@yahoo.com,(555) 890-1234,258 Walnut Ave,Elgin,IL,60120,USA,Standard,2022-06-12,1995-01-17
+C009,Henry,Moore,henry.moore@hotmail.com,(555) 901-2345,369 Cherry Dr,Waukegan,IL,60085,USA,Premium,2022-07-08,1982-10-09
+C010,Ivy,Taylor,ivy.taylor@outlook.com,(555) 012-3456,741 Ash Ln,Decatur,IL,62521,USA,Standard,2022-04-22,1993-03-31
+C011,Jack,Anderson,jack.anderson@email.com,(555) 123-4568,852 Spruce Rd,Champaign,IL,61820,USA,VIP,2021-10-15,1967-08-12
