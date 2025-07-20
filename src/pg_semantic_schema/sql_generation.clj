@@ -51,7 +51,8 @@
 (defn generate-column-definition
   "Generate column definition for PostgreSQL"
   [column-data table-type config]
-  (let [column-name (-> (:property column-data)
+  (let [property-uri (or (:property column-data) "unknown_property")
+        column-name (-> property-uri
                        (str/split #"/")
                        last
                        (str/replace #"[^a-zA-Z0-9_]" "_")
@@ -73,9 +74,17 @@
                             ")")
                        postgres-type)
         
-        ;; Determine constraints
-        not-null? (< (/ null-count total-count) 0.1) ; Less than 10% nulls
-        unique? (and (= role :identifier) (> (/ unique-count total-count) 0.95))
+        ;; Determine constraints - be more conservative about UNIQUE constraints
+        not-null? (and (> total-count 0) (< (/ null-count total-count) 0.1)) ; Less than 10% nulls
+        
+        ;; Only apply UNIQUE constraint to true identifiers with specific patterns
+        unique? (and (= role :identifier)
+                     (> unique-count 5) ; Must have reasonable sample size
+                     (or (.contains (str/lower-case column-name) "id")
+                         (.contains (str/lower-case column-name) "key")
+                         (.contains (str/lower-case column-name) "code")
+                         (.contains (str/lower-case column-name) "number"))
+                     (= semantic-type :unknown)) ; Don't make semantic types unique
         
         constraints (cond-> []
                       not-null? (conj "NOT NULL")
@@ -86,7 +95,7 @@
      :constraints constraints
      :role role
      :semantic-type semantic-type
-     :original-property (:property column-data)}))
+     :original-property property-uri}))
 
 (defn generate-fact-table-ddl
   "Generate DDL for a fact table"

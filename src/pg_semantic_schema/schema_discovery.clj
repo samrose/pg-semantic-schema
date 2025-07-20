@@ -239,8 +239,14 @@
   "Calculate completeness scores for columns"
   [column-roles]
   (mapv (fn [col]
-          (let [unique-vals (Integer/parseInt (onto/parse-rdf-literal (:uniqueValues col)))
-                null-vals (Integer/parseInt (onto/parse-rdf-literal (:nullValues col)))
+          (let [unique-str (onto/parse-rdf-literal (:uniqueValues col))
+                null-str (onto/parse-rdf-literal (:nullValues col))
+                unique-vals (if (and unique-str (not (str/blank? unique-str)))
+                             (Integer/parseInt unique-str)
+                             0)
+                null-vals (if (and null-str (not (str/blank? null-str)))
+                           (Integer/parseInt null-str)
+                           0)
                 total-vals (+ unique-vals null-vals)
                 completeness (if (pos? total-vals)
                               (/ (- total-vals null-vals) total-vals)
@@ -252,8 +258,14 @@
   "Calculate uniqueness scores for potential key columns"
   [column-roles]
   (mapv (fn [col]
-          (let [unique-vals (Integer/parseInt (onto/parse-rdf-literal (:uniqueValues col)))
-                null-vals (Integer/parseInt (onto/parse-rdf-literal (:nullValues col)))
+          (let [unique-str (onto/parse-rdf-literal (:uniqueValues col))
+                null-str (onto/parse-rdf-literal (:nullValues col))
+                unique-vals (if (and unique-str (not (str/blank? unique-str)))
+                             (Integer/parseInt unique-str)
+                             0)
+                null-vals (if (and null-str (not (str/blank? null-str)))
+                           (Integer/parseInt null-str)
+                           0)
                 total-vals (+ unique-vals null-vals)
                 uniqueness (if (pos? total-vals)
                             (/ unique-vals total-vals)
@@ -327,8 +339,11 @@
      :schema-metadata {:column-count (count (:column-roles ontology-data))
                       :relationship-count (+ (count (:foreign-key-candidates ontology-data))
                                            (count (:hierarchies ontology-data)))
-                      :semantic-type-coverage (/ (count (filter :semantic-type (:semantic-types ontology-data)))
-                                               (count (:semantic-types ontology-data)))}}))
+                      :semantic-type-coverage (let [total-types (count (:semantic-types ontology-data))]
+                                                (if (pos? total-types)
+                                                  (/ (count (filter :semantic-type (:semantic-types ontology-data)))
+                                                     total-types)
+                                                  0.0))}}))
 
 (comment
   ;; Example usage for REPL exploration

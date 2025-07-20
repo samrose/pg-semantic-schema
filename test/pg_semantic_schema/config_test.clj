@@ -82,13 +82,17 @@
 
 (deftest test-create-ontology-model
   (testing "Ontology model creation"
-    (let [model (config/create-ontology-model)]
+    (let [model (config/create-ontology-model config/*default-config*)]
       (is (some? model))
       (is (>= (.size model) 0)))))
 
-(deftest test-create-inference-model
-  (testing "Inference model creation"
-    (let [base-model (ModelFactory/createDefaultModel)
-          inference-model (config/create-inference-model base-model)]
-      (is (some? inference-model))
-      (is (>= (.size inference-model) 0)))))
+(deftest test-create-ontology-model-integration
+  (testing "Ontology model integration with Jena"
+    (let [model (config/create-ontology-model config/*default-config*)]
+      (is (some? model))
+      ; Test that we can add statements to the model
+      (.add model
+            (.createResource model "http://example.org/test")
+            (.createProperty model "http://example.org/property")
+            "test-value")
+      (is (> (.size model) 0)))))
