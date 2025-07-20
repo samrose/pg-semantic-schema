@@ -40,7 +40,22 @@
               :properties ["address" "latitude" "longitude" "postalCode" "addressCountry"]}
    
    :time {:concepts ["DateTime" "Date" "Time" "Duration"]
-          :properties ["startDate" "endDate" "dateCreated" "dateModified"]}})
+          :properties ["startDate" "endDate" "dateCreated" "dateModified"]}
+   
+   :energy {:concepts ["EnergyConsumption" "Meter" "Utility" "PowerSource"]
+            :properties ["consumption" "meter" "energy" "power" "kwh" "demand" "tariff" "grid" "solar" "wind"]}
+   
+   :food {:concepts ["FoodEstablishment" "Restaurant" "Inspection" "FoodSafety"]
+          :properties ["inspection" "establishment" "food" "restaurant" "license" "violation" "safety" "kitchen"]}
+   
+   :healthcare {:concepts ["Patient" "MedicalRecord" "Treatment" "Diagnosis" "Hospital"]
+                :properties ["patient" "medical" "diagnosis" "treatment" "medication" "hospital" "physician" "insurance"]}
+   
+   :transportation {:concepts ["Shipment" "Logistics" "Carrier" "Delivery"]
+                    :properties ["shipment" "tracking" "delivery" "carrier" "logistics" "freight" "warehouse" "route"]}
+   
+   :manufacturing {:concepts ["Production" "QualityControl" "Inspection" "Manufacturing"]
+                   :properties ["production" "quality" "inspection" "batch" "manufacturing" "defect" "tolerance" "standard"]}})
 
 ;; GoodRelations e-commerce ontology mappings
 (def good-relations-mappings

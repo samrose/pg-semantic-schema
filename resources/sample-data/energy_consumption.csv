@@ -1,0 +1,16 @@
+meter_id,customer_id,property_type,energy_source,consumption_kwh,peak_demand_kw,billing_period_start,billing_period_end,temperature_avg_f,tariff_code,cost_per_kwh,total_cost,carbon_emissions_kg,renewable_percentage,grid_connection_type,voltage_level
+MTR001,CUST001,Residential,Grid,$245.50,8.2,2024-01-01,2024-01-31,42.5,RES-TIER1,$0.12,$29.46,98.2,25.5,Single Phase,120V
+MTR002,CUST002,Commercial,Solar+Grid,$1250.75,45.8,2024-01-01,2024-01-31,41.8,COM-TOU,$0.08,$100.06,312.7,78.2,Three Phase,480V
+MTR003,CUST003,Industrial,Grid,$8950.25,285.6,2024-01-01,2024-01-31,39.2,IND-DEMAND,$0.06,$537.02,3580.1,15.8,Three Phase,4160V
+MTR004,CUST004,Residential,Wind+Grid,$189.30,6.5,2024-01-01,2024-01-31,44.1,RES-GREEN,$0.10,$18.93,45.4,89.2,Single Phase,240V
+MTR005,CUST005,Commercial,Grid,$2875.40,78.9,2024-01-01,2024-01-31,40.5,COM-PEAK,$0.15,$431.31,1150.2,22.1,Three Phase,208V
+MTR006,CUST006,Residential,Solar,$95.80,4.1,2024-01-01,2024-01-31,43.2,RES-NET,$0.05,$4.79,0.0,100.0,Single Phase,120V
+MTR007,CUST007,Municipal,Hydro+Grid,$5640.15,156.7,2024-01-01,2024-01-31,41.0,MUN-BULK,$0.04,$225.61,564.0,95.5,Three Phase,12470V
+MTR008,CUST008,Agricultural,Grid,$3250.90,89.2,2024-01-01,2024-01-31,38.9,AGR-SEASON,$0.07,$227.56,1300.4,18.7,Three Phase,480V
+MTR009,CUST009,Residential,Geothermal+Grid,$156.40,5.8,2024-01-01,2024-01-31,45.6,RES-TIER2,$0.14,$21.90,31.3,88.9,Single Phase,240V
+MTR010,CUST010,Industrial,Grid+Battery,$12400.65,398.5,2024-01-01,2024-01-31,37.8,IND-STORAGE,$0.05,$620.03,4960.3,12.4,Three Phase,13800V
+MTR011,CUST011,Commercial,Solar+Wind,$875.25,28.9,2024-01-01,2024-01-31,42.8,COM-HYBRID,$0.06,$52.52,87.5,96.8,Three Phase,277V
+MTR012,CUST012,Residential,Grid,$312.80,9.8,2024-01-01,2024-01-31,44.9,RES-TIER3,$0.16,$50.05,125.1,28.3,Single Phase,120V
+MTR013,CUST013,Educational,Grid,$4580.30,142.6,2024-01-01,2024-01-31,41.7,EDU-STANDARD,$0.09,$412.23,1832.1,35.2,Three Phase,480V
+MTR014,CUST014,Healthcare,Grid+UPS,$6750.45,198.2,2024-01-01,2024-01-31,40.2,HLT-CRITICAL,$0.11,$742.55,2700.2,19.6,Three Phase,208V
+MTR015,CUST015,Data Center,Grid+Backup,$18950.75,625.8,2024-01-01,2024-01-31,39.5,DC-24x7,$0.07,$1326.55,7580.3,8.2,Three Phase,480V

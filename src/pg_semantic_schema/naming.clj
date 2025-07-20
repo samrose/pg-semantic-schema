@@ -75,10 +75,14 @@
                       :product "product_catalog"
                       :marketing "marketing_analytics"
                       :logistics "supply_chain"
-                      :healthcare "patient_data"
+                      :healthcare "healthcare_data"
                       :education "academic_data"
                       :retail "retail_operations"
                       :organization "organizational_data"
+                      :energy "energy_management"
+                      :food "food_safety"
+                      :transportation "logistics_data"
+                      :manufacturing "production_data"
                       :general (str (str/replace table-name #"[^a-zA-Z0-9]" "_") "_schema"))]
     
     (log/info "Generated schema name:" schema-name "for domain:" domain)
